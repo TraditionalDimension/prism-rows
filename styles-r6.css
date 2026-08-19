@@ -405,3 +405,34 @@ button { -webkit-appearance: none; appearance: none; }
   .guide-support { grid-template-columns:1fr; }
   .guide-support .action-button { margin-top:4px; }
 }
+
+
+/* r7 — Android closed test */
+.test-home-card {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, rgba(99,215,232,.075), rgba(183,121,223,.085));
+  border-color: rgba(99,215,232,.17);
+}
+.test-home-card h2 { margin-bottom: 8px; }
+.test-home-card .action-button { margin-top: 8px; }
+.test-intro { margin-bottom: 18px; }
+.test-notice {
+  margin-bottom: 18px; padding: 18px 20px;
+  border: 1px solid rgba(99,215,232,.22); border-left: 3px solid var(--cyan);
+  border-radius: 18px; background: rgba(99,215,232,.055);
+}
+.test-notice p:last-child { margin-bottom: 0; color: #d8dcea; }
+.test-steps { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
+.test-step { display: flex; flex-direction: column; }
+.test-step .action-button { margin-top: auto; align-self: flex-start; }
+.step-number {
+  margin: 0 0 10px; color: var(--violet); font-size: .8rem; font-weight: 800;
+  letter-spacing: .08em; text-transform: uppercase;
+}
+.test-meta { margin-top: 12px; margin-bottom: 0; color: var(--muted); font-size: .86rem; }
+.action-button.disabled, .action-button[aria-disabled="true"] {
+  opacity: .5; cursor: not-allowed; pointer-events: none;
+}
+.test-direct-links { margin-top: 18px; }
+.test-direct-links code { color: var(--cyan); overflow-wrap: anywhere; }
+@media (max-width:760px) { .test-steps { grid-template-columns: 1fr; } }
